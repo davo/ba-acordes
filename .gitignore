@@ -1,1 +1,6 @@
+## pods libs
 Pods/
+## mariano workspace
+.DS_Store
+ba-acordes.xcodeproj/xcuserdata/marianomolina.xcuserdatad/
+ba-acordes.xcworkspace/xcuserdata/

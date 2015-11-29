@@ -125,7 +125,7 @@
 				TargetAttributes = {
 					50695C4F1C0A42A100BA6AEA = {
 						CreatedOnToolsVersion = 7.1;
-						DevelopmentTeam = MCJ455R27F;
+						DevelopmentTeam = HLY49RTLRG;
 					};
 				};
 			};
@@ -330,10 +330,13 @@
 			baseConfigurationReference = 97779A6001BD8E6A66278540 /* Pods-ba-acordes.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "ba-acordes/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "co.pixelbeat.ba-acordes";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = "ba-acordes/ba-acordes-Bridging-Header.h";
 			};
 			name = Debug;
@@ -343,10 +346,13 @@
 			baseConfigurationReference = 1A4426F21A945119040972F2 /* Pods-ba-acordes.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "ba-acordes/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "co.pixelbeat.ba-acordes";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = "ba-acordes/ba-acordes-Bridging-Header.h";
 			};
 			name = Release;
