@@ -10,7 +10,6 @@ import AudioKit
 class Conductor {
     
     let fmOscillator = FMSynth()
-    let fmOscillator2 = FMSynth()
     
     let frequencySequence = AKSequence()
     let modulationIndexSequence = AKSequence()
@@ -27,7 +26,6 @@ class Conductor {
         
         randomizeFrequency = AKEvent(block: {
             self.fmOscillator.frequency.randomize()
-            self.fmOscillator2.frequency.randomize()
             self.frequencySequence.addEvent(self.randomizeFrequency, afterDuration: 0.1)
         })
         
