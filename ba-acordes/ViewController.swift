@@ -12,7 +12,8 @@ import AudioKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var toggleSwitchClicked: UISwitch!
-    let fmOscillator = FMSynth()
+    
+    var conductor = Conductor()
     
     @IBOutlet weak var frequencySlider: AKPropertySlider!
     @IBOutlet weak var carrierMultiplierSlider: AKPropertySlider!
@@ -22,16 +23,21 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        AKOrchestra.addInstrument(fmOscillator)
-        frequencySlider.property = fmOscillator.frequency
-        carrierMultiplierSlider.property = fmOscillator.carrierMultiplier
-        modulationIndexSlider.property = fmOscillator.modulationIndex
-        amplitudeSlider.property = fmOscillator.amplitude
+        //AKOrchestra.addInstrument(fmOscillator)
+//        frequencySlider.property = fmOscillator.frequency
+//        carrierMultiplierSlider.property = fmOscillator.carrierMultiplier
+//        modulationIndexSlider.property = fmOscillator.modulationIndex
+//        amplitudeSlider.property = fmOscillator.amplitude
+        
+        frequencySlider.property = conductor.fmOscillator.frequency
+        modulationIndexSlider.property = conductor.fmOscillator.modulationIndex
+        carrierMultiplierSlider.property = conductor.fmOscillator.carrierMultiplier
+        amplitudeSlider.property = conductor.fmOscillator.amplitude
     }
     
     // toggleEvent
     @IBAction func toggleInstrument(sender: AnyObject) {
-        toggleSwitchClicked.on ? fmOscillator.play() : fmOscillator.stop()
+        toggleSwitchClicked.on ? conductor.start() : conductor.stop()
         
     }
 

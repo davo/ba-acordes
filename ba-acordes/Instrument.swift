@@ -9,9 +9,9 @@ import AudioKit
 
 class FMSynth: AKInstrument {
     
-    var frequency = AKInstrumentProperty(value: 440, minimum: 150, maximum: 740)
+    var frequency = AKInstrumentProperty(value: 220, minimum: 110, maximum: 880)
     var carrierMultiplier = AKInstrumentProperty(value: 0.5, minimum: 0.0, maximum: 1.0)
-    var modulationIndex = AKInstrumentProperty(value: 0.5, minimum: 0.0, maximum: 1.0)
+    var modulationIndex = AKInstrumentProperty(value: 0.5, minimum: 0.25, maximum: 2.2)
     var amplitude   = AKInstrumentProperty(value: 0.25, minimum: 0.0, maximum: 0.5)
     
     override init() {
