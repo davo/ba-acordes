@@ -24,17 +24,17 @@ class Conductor {
     
     init() {
         
-        randomizeFrequency = AKEvent(block: {
-            self.fmOscillator.frequency.randomize()
-            self.frequencySequence.addEvent(self.randomizeFrequency, afterDuration: 0.1)
-        })
+//        randomizeFrequency = AKEvent(block: {
+//            self.fmOscillator.frequency.randomize()
+//            self.frequencySequence.addEvent(self.randomizeFrequency, afterDuration: 0.1)
+//        })
         
         randomizeModulationIndex = AKEvent(block: {
             self.fmOscillator.modulationIndex.randomize()
             self.modulationIndexSequence.addEvent(self.randomizeModulationIndex, afterDuration: 0.2)
         })
         
-        frequencySequence.addEvent(randomizeFrequency, atTime: 3.0)
+//        frequencySequence.addEvent(randomizeFrequency, atTime: 3.0)
         modulationIndexSequence.addEvent(randomizeModulationIndex, atTime: 0.2)
         
         AKOrchestra.addInstrument(fmOscillator)
@@ -42,14 +42,14 @@ class Conductor {
     
     func start() {
         fmOscillator.play()
-        fmOscillator.frequency.randomize()
-        frequencySequence.play()
+//        fmOscillator.frequency.randomize()
+//        frequencySequence.play()
         modulationIndexSequence.play()
     }
     
     func stop() {
         fmOscillator.stop()
-        frequencySequence.stop()
+//        frequencySequence.stop()
         modulationIndexSequence.stop()
     }
     

@@ -28,6 +28,9 @@
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="bSP-dM-m4h" customClass="AKPropertySlider">
                                 <rect key="frame" x="18" y="136" width="274" height="31"/>
                                 <animations/>
+                                <connections>
+                                    <action selector="firstFrequencySlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="Qcx-rz-rNJ"/>
+                                </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Frequency" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="58P-am-Fi6">
                                 <rect key="frame" x="52" y="98" width="81" height="21"/>
@@ -75,6 +78,9 @@
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Hq2-im-U22" customClass="AKPropertySlider">
                                 <rect key="frame" x="18" y="421" width="274" height="31"/>
                                 <animations/>
+                                <connections>
+                                    <action selector="frequencySliderAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="yDR-at-v9l"/>
+                                </connections>
                             </slider>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="lo9-ku-HHP" customClass="AKPropertySlider">
                                 <rect key="frame" x="18" y="513" width="274" height="31"/>
@@ -88,6 +94,13 @@
                                 <rect key="frame" x="18" y="268.5" width="274" height="31"/>
                                 <animations/>
                             </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n53-nA-3J1">
+                                <rect key="frame" x="134" y="371" width="42" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="siB-Fh-hfZ" customClass="AKPropertySlider">
                                 <rect key="frame" x="308" y="421" width="274" height="31"/>
                                 <animations/>
@@ -102,6 +115,7 @@
                             <constraint firstItem="OyW-2c-Zy7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8uj-dW-AXq"/>
                             <constraint firstAttribute="leadingMargin" secondItem="lo9-ku-HHP" secondAttribute="leading" id="95W-H1-tY6"/>
                             <constraint firstItem="zP0-k1-dDk" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="9fW-Xi-4TL"/>
+                            <constraint firstItem="n53-nA-3J1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="114" id="A3w-eS-ohG"/>
                             <constraint firstItem="OyW-2c-Zy7" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="32" id="A8i-Y1-7ne"/>
                             <constraint firstItem="I5F-Sd-m5g" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="78" id="BG6-5L-wgJ"/>
                             <constraint firstItem="Hq2-im-U22" firstAttribute="trailing" secondItem="XQG-7u-M7O" secondAttribute="trailing" id="Cud-H0-ziN"/>
@@ -118,6 +132,7 @@
                             <constraint firstItem="XQG-7u-M7O" firstAttribute="top" secondItem="suW-Y1-nRM" secondAttribute="bottom" constant="17" id="alU-Gp-Czz"/>
                             <constraint firstItem="zP0-k1-dDk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="b0P-Wy-MTu"/>
                             <constraint firstItem="Tag-mo-hII" firstAttribute="top" secondItem="siB-Fh-hfZ" secondAttribute="bottom" constant="62" id="bFZ-VU-1wc"/>
+                            <constraint firstItem="Hq2-im-U22" firstAttribute="top" secondItem="n53-nA-3J1" secondAttribute="bottom" constant="29" id="bry-fN-Jrj"/>
                             <constraint firstItem="Hq2-im-U22" firstAttribute="trailing" secondItem="lo9-ku-HHP" secondAttribute="trailing" id="cVe-9P-OW4"/>
                             <constraint firstItem="bSP-dM-m4h" firstAttribute="width" secondItem="Ucv-K0-re4" secondAttribute="width" id="fZ6-DP-Jji"/>
                             <constraint firstItem="Ucv-K0-re4" firstAttribute="leading" secondItem="T6c-jL-aTH" secondAttribute="leading" id="gBW-7h-Hq0"/>
@@ -151,6 +166,8 @@
                         <outlet property="carrierMultiplierSlider2" destination="siB-Fh-hfZ" id="q6Z-gB-D9C"/>
                         <outlet property="frequencySlider" destination="bSP-dM-m4h" id="eHc-zI-Qhh"/>
                         <outlet property="frequencySlider2" destination="Hq2-im-U22" id="ChC-Uz-Jib"/>
+                        <outlet property="frequencyValue" destination="58P-am-Fi6" id="0Tx-xS-HQx"/>
+                        <outlet property="frequencyValue2" destination="n53-nA-3J1" id="D1Q-O2-gKI"/>
                         <outlet property="modulationIndexSlider" destination="XQG-7u-M7O" id="7WG-hk-gdi"/>
                         <outlet property="modulationIndexSlider2" destination="lo9-ku-HHP" id="Fcf-IU-AhM"/>
                         <outlet property="toggleSwitch2" destination="zP0-k1-dDk" id="Pmo-Rf-8u7"/>

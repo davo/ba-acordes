@@ -28,6 +28,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var modulationIndexSlider2: AKPropertySlider!
     @IBOutlet weak var amplitudeSlider2: AKPropertySlider!
     
+    @IBOutlet weak var frequencyValue: UILabel!
+    @IBOutlet weak var frequencyValue2: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -42,6 +45,7 @@ class ViewController: UIViewController {
         modulationIndexSlider2.property = conductor2.fmOscillator.modulationIndex
         carrierMultiplierSlider2.property = conductor2.fmOscillator.carrierMultiplier
         amplitudeSlider2.property = conductor2.fmOscillator.amplitude
+        
     }
     
     // toggleEvent
@@ -55,6 +59,14 @@ class ViewController: UIViewController {
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    @IBAction func frequencySliderAction(sender: AKPropertySlider) {
+        frequencyValue2.text = "\( sender.value )"
+    }
+    
+    @IBAction func firstFrequencySlider(sender: AKPropertySlider) {
+        frequencyValue.text = "\( sender.value )"
     }
     
     override func viewDidDisappear(animated: Bool) {
