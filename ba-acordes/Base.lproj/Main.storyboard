@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -17,21 +18,98 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a2V-O0-ZbK">
-                                <rect key="frame" x="53" y="285" width="46" height="30"/>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="OyW-2c-Zy7">
+                                <rect key="frame" x="276" y="52" width="51" height="31"/>
                                 <animations/>
-                                <state key="normal" title="Button"/>
                                 <connections>
-                                    <action selector="tap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qwb-dh-bM8"/>
+                                    <action selector="toggleInstrument:" destination="BYZ-38-t0r" eventType="valueChanged" id="pe4-h1-ROM"/>
                                 </connections>
-                            </button>
+                            </switch>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="bSP-dM-m4h" customClass="AKPropertySlider">
+                                <rect key="frame" x="18" y="136" width="274" height="31"/>
+                                <animations/>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Frequency" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="58P-am-Fi6">
+                                <rect key="frame" x="52" y="98" width="81" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Ucv-K0-re4" customClass="AKPropertySlider">
+                                <rect key="frame" x="308" y="136" width="274" height="31"/>
+                                <animations/>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Carrier Multiplier" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I5F-Sd-m5g">
+                                <rect key="frame" x="432.5" y="98" width="127.5" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Modulation Index" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="suW-Y1-nRM">
+                                <rect key="frame" x="35" y="231" width="131.5" height="20.5"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="T6c-jL-aTH" customClass="AKPropertySlider">
+                                <rect key="frame" x="308" y="268.5" width="274" height="31"/>
+                                <animations/>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amplitude" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bDR-ti-Ngh">
+                                <rect key="frame" x="462" y="231" width="78" height="20.5"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="XQG-7u-M7O" customClass="AKPropertySlider">
+                                <rect key="frame" x="18" y="268.5" width="274" height="31"/>
+                                <animations/>
+                            </slider>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ucv-K0-re4" firstAttribute="leading" secondItem="bSP-dM-m4h" secondAttribute="trailing" constant="20" id="5or-Wb-ww1"/>
+                            <constraint firstItem="OyW-2c-Zy7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8uj-dW-AXq"/>
+                            <constraint firstItem="OyW-2c-Zy7" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="32" id="A8i-Y1-7ne"/>
+                            <constraint firstItem="I5F-Sd-m5g" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="78" id="BG6-5L-wgJ"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="bSP-dM-m4h" secondAttribute="leading" id="DaM-Ai-VFQ"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="XQG-7u-M7O" secondAttribute="leading" id="Dw7-Ba-gWa"/>
+                            <constraint firstItem="XQG-7u-M7O" firstAttribute="width" secondItem="T6c-jL-aTH" secondAttribute="width" id="FYA-aP-z1T"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="I5F-Sd-m5g" secondAttribute="trailing" constant="20" id="LoR-DT-1nN"/>
+                            <constraint firstItem="suW-Y1-nRM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="15" id="Ruo-8N-tq6"/>
+                            <constraint firstItem="Ucv-K0-re4" firstAttribute="top" secondItem="I5F-Sd-m5g" secondAttribute="bottom" constant="17" id="VZk-NA-Yes"/>
+                            <constraint firstItem="T6c-jL-aTH" firstAttribute="top" secondItem="bDR-ti-Ngh" secondAttribute="bottom" constant="17" id="YNo-R8-7Vj"/>
+                            <constraint firstItem="bSP-dM-m4h" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="136" id="ZSE-46-kNs"/>
+                            <constraint firstItem="XQG-7u-M7O" firstAttribute="top" secondItem="suW-Y1-nRM" secondAttribute="bottom" constant="17" id="alU-Gp-Czz"/>
+                            <constraint firstItem="bSP-dM-m4h" firstAttribute="width" secondItem="Ucv-K0-re4" secondAttribute="width" id="fZ6-DP-Jji"/>
+                            <constraint firstItem="Ucv-K0-re4" firstAttribute="leading" secondItem="T6c-jL-aTH" secondAttribute="leading" id="gBW-7h-Hq0"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Ucv-K0-re4" secondAttribute="trailing" id="l3J-4Y-JIV"/>
+                            <constraint firstItem="bSP-dM-m4h" firstAttribute="top" secondItem="58P-am-Fi6" secondAttribute="bottom" constant="17" id="o3i-SO-dvJ"/>
+                            <constraint firstItem="Ucv-K0-re4" firstAttribute="top" secondItem="bSP-dM-m4h" secondAttribute="top" id="qvo-d0-wH8"/>
+                            <constraint firstItem="58P-am-Fi6" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="78" id="rVx-mQ-2qx"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bDR-ti-Ngh" secondAttribute="trailing" constant="40" id="tEA-3N-8De"/>
+                            <constraint firstItem="58P-am-Fi6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="32" id="uTk-95-aX5"/>
+                            <constraint firstItem="bDR-ti-Ngh" firstAttribute="top" secondItem="Ucv-K0-re4" secondAttribute="bottom" constant="65" id="xtg-DG-Bds"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="T6c-jL-aTH" secondAttribute="trailing" id="yBY-kG-X4v"/>
+                            <constraint firstItem="suW-Y1-nRM" firstAttribute="top" secondItem="bSP-dM-m4h" secondAttribute="bottom" constant="65" id="yeg-8g-e1M"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="amplitudeSlider" destination="T6c-jL-aTH" id="Cav-Am-aBz"/>
+                        <outlet property="carrierMultiplierSlider" destination="Ucv-K0-re4" id="PC6-dd-gxL"/>
+                        <outlet property="frequencySlider" destination="bSP-dM-m4h" id="eHc-zI-Qhh"/>
+                        <outlet property="modulationIndexSlider" destination="XQG-7u-M7O" id="7WG-hk-gdi"/>
+                        <outlet property="toggleSwitchClicked" destination="OyW-2c-Zy7" id="hfa-sB-pUS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="325" y="385"/>
         </scene>
     </scenes>
 </document>

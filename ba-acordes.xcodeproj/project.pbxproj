@@ -13,6 +13,7 @@
 		50695C591C0A42A200BA6AEA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50695C571C0A42A200BA6AEA /* Main.storyboard */; };
 		50695C5B1C0A42A200BA6AEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50695C5A1C0A42A200BA6AEA /* Assets.xcassets */; };
 		50695C5E1C0A42A200BA6AEA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50695C5C1C0A42A200BA6AEA /* LaunchScreen.storyboard */; };
+		7C87CAA61C0AA473006BC7E0 /* Instrument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C87CAA51C0AA473006BC7E0 /* Instrument.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		50695C5D1C0A42A200BA6AEA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		50695C5F1C0A42A200BA6AEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		50695C651C0A464000BA6AEA /* ba-acordes-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ba-acordes-Bridging-Header.h"; sourceTree = "<group>"; };
+		7C87CAA51C0AA473006BC7E0 /* Instrument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Instrument.swift; sourceTree = "<group>"; };
 		97779A6001BD8E6A66278540 /* Pods-ba-acordes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ba-acordes.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ba-acordes/Pods-ba-acordes.debug.xcconfig"; sourceTree = "<group>"; };
 		D84D2AEE9BF7BEF6461F91BE /* Pods_ba_acordes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ba_acordes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -71,6 +73,7 @@
 		50695C521C0A42A100BA6AEA /* ba-acordes */ = {
 			isa = PBXGroup;
 			children = (
+				7C87CAA41C0AA44B006BC7E0 /* instrument */,
 				50695C531C0A42A100BA6AEA /* AppDelegate.swift */,
 				50695C551C0A42A100BA6AEA /* ViewController.swift */,
 				50695C571C0A42A200BA6AEA /* Main.storyboard */,
@@ -88,6 +91,14 @@
 				D84D2AEE9BF7BEF6461F91BE /* Pods_ba_acordes.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7C87CAA41C0AA44B006BC7E0 /* instrument */ = {
+			isa = PBXGroup;
+			children = (
+				7C87CAA51C0AA473006BC7E0 /* Instrument.swift */,
+			);
+			name = instrument;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -214,6 +225,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				50695C561C0A42A100BA6AEA /* ViewController.swift in Sources */,
+				7C87CAA61C0AA473006BC7E0 /* Instrument.swift in Sources */,
 				50695C541C0A42A100BA6AEA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
