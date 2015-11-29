@@ -20,21 +20,12 @@ class Conductor {
     var frequencyTimer: NSTimer!
     var modIndexTimer: NSTimer!
     
-    //var fx: EffectsProcessor
-    
     init() {
-        
-//        randomizeFrequency = AKEvent(block: {
-//            self.fmOscillator.frequency.randomize()
-//            self.frequencySequence.addEvent(self.randomizeFrequency, afterDuration: 0.1)
-//        })
-        
+        // Modulation Index Random.
         randomizeModulationIndex = AKEvent(block: {
             self.fmOscillator.modulationIndex.randomize()
             self.modulationIndexSequence.addEvent(self.randomizeModulationIndex, afterDuration: 0.2)
         })
-        
-//        frequencySequence.addEvent(randomizeFrequency, atTime: 3.0)
         modulationIndexSequence.addEvent(randomizeModulationIndex, atTime: 0.2)
         
         AKOrchestra.addInstrument(fmOscillator)
@@ -42,15 +33,32 @@ class Conductor {
     
     func start() {
         fmOscillator.play()
-//        fmOscillator.frequency.randomize()
-//        frequencySequence.play()
         modulationIndexSequence.play()
     }
     
     func stop() {
         fmOscillator.stop()
-//        frequencySequence.stop()
         modulationIndexSequence.stop()
     }
+    
+    // Funciones de control de sintetizador. >>Edit Lucas.
+    
+    //Frecuencia.
+    func setFrequency(Frec: Float) {
+        fmOscillator.frequency.value = Frec
+    }
+    //carrierMutipler
+    func setCarrierMultipler(Mult: Float) {
+        fmOscillator.carrierMultiplier.value = Mult
+    }
+    //Amplitude
+    func setAmplitude(Amp: Float) {
+        fmOscillator.amplitude.value = Amp
+    }
+    //    Esta puesta Random.
+    //    //Modulation Index
+    //    func setModulationIndex(Mod: Float) {
+    //        fmOscillator.modulationIndex.value = Mod
+    //    }
     
 }
