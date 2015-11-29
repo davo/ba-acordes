@@ -29,9 +29,7 @@ class FMSynth: AKInstrument {
         fmOscillator.carrierMultiplier = carrierMultiplier
         fmOscillator.modulationIndex = modulationIndex
         fmOscillator.amplitude = amplitude
-        
         // set Output
         setAudioOutput(fmOscillator)
     }
-    
 }
