@@ -18,6 +18,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="sjZ-xd-vhJ">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <animations/>
+                            </mapView>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iAN-kd-BhF">
                                 <rect key="frame" x="0.0" y="384" width="600" height="216"/>
                                 <animations/>
@@ -26,27 +30,27 @@
                                     <outlet property="delegate" destination="1xQ-KT-DdQ" id="phZ-Vc-hl6"/>
                                 </connections>
                             </pickerView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="barrio" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r9B-vV-V3g">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="barrio" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="r9B-vV-V3g">
                                 <rect key="frame" x="20" y="20" width="560" height="50"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="gT3-z5-Kfl"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="long" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DvX-ve-Uj1">
-                                <rect key="frame" x="20" y="135" width="560" height="36"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="lat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Tlg-Sl-pHc">
+                                <rect key="frame" x="20" y="78" width="560" height="30"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="lat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tlg-Sl-pHc">
-                                <rect key="frame" x="20" y="78" width="560" height="36"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="long" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="DvX-ve-Uj1">
+                                <rect key="frame" x="20" y="129" width="560" height="30"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -56,22 +60,27 @@
                         <constraints>
                             <constraint firstItem="iAN-kd-BhF" firstAttribute="leading" secondItem="dUV-oI-3r4" secondAttribute="leadingMargin" constant="-20" id="5Sp-rc-q9a"/>
                             <constraint firstItem="R0a-Se-u75" firstAttribute="top" secondItem="iAN-kd-BhF" secondAttribute="bottom" id="6IM-HD-yzJ"/>
+                            <constraint firstItem="sjZ-xd-vhJ" firstAttribute="centerY" secondItem="dUV-oI-3r4" secondAttribute="centerY" id="JIA-rk-bsF"/>
                             <constraint firstItem="Tlg-Sl-pHc" firstAttribute="leading" secondItem="dUV-oI-3r4" secondAttribute="leadingMargin" id="K7f-U1-IHW"/>
+                            <constraint firstItem="sjZ-xd-vhJ" firstAttribute="centerX" secondItem="dUV-oI-3r4" secondAttribute="centerX" id="KWs-Zw-KPG"/>
                             <constraint firstAttribute="leadingMargin" secondItem="r9B-vV-V3g" secondAttribute="leading" id="Kj9-XW-HBK"/>
                             <constraint firstAttribute="trailingMargin" secondItem="r9B-vV-V3g" secondAttribute="trailing" id="PwS-on-buE"/>
                             <constraint firstAttribute="trailingMargin" secondItem="iAN-kd-BhF" secondAttribute="trailing" constant="-20" id="Tjh-Ev-PEF"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Tlg-Sl-pHc" secondAttribute="trailing" id="cso-J8-kKB"/>
                             <constraint firstItem="DvX-ve-Uj1" firstAttribute="leading" secondItem="dUV-oI-3r4" secondAttribute="leadingMargin" id="d4r-18-RgF"/>
                             <constraint firstItem="r9B-vV-V3g" firstAttribute="top" secondItem="UlV-ee-c3r" secondAttribute="bottom" id="eQo-pV-4tI"/>
+                            <constraint firstItem="sjZ-xd-vhJ" firstAttribute="width" secondItem="dUV-oI-3r4" secondAttribute="width" id="n50-Q7-haZ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="DvX-ve-Uj1" secondAttribute="trailing" id="sGM-HX-wAZ"/>
                             <constraint firstItem="Tlg-Sl-pHc" firstAttribute="top" secondItem="r9B-vV-V3g" secondAttribute="bottom" constant="8" id="sLn-H6-baD"/>
                             <constraint firstItem="DvX-ve-Uj1" firstAttribute="top" secondItem="Tlg-Sl-pHc" secondAttribute="bottom" constant="21" id="yKD-lP-mg1"/>
+                            <constraint firstItem="sjZ-xd-vhJ" firstAttribute="height" secondItem="dUV-oI-3r4" secondAttribute="height" id="zyk-mP-ana"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="barrioSelectedLabel" destination="r9B-vV-V3g" id="8L0-uU-GrG"/>
                         <outlet property="latLabel" destination="Tlg-Sl-pHc" id="7eL-gZ-lEE"/>
                         <outlet property="longLabel" destination="DvX-ve-Uj1" id="Pb4-wp-8X7"/>
+                        <outlet property="myMap" destination="sjZ-xd-vhJ" id="7mv-hA-Jm8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="egA-YY-8Ej" userLabel="First Responder" sceneMemberID="firstResponder"/>

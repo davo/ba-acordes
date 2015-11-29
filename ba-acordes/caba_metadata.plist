@@ -30,7 +30,7 @@
 		<key>comuna</key>
 		<string>5</string>
 		<key>poblacion_total</key>
-		<string>220</string>
+		<string>131699</string>
 		<key>hombres</key>
 		<string>58871</string>
 		<key>mujeres</key>
@@ -42,9 +42,9 @@
 		<key>zoom</key>
 		<string>13</string>
 		<key>manzanas_por_barrio</key>
-		<string>0.5</string>
+		<string>253</string>
 		<key>arboles_por_barrio</key>
-		<string>0.7</string>
+		<string>8248</string>
 	</dict>
 	<dict>
 		<key>barrio</key>
@@ -52,7 +52,7 @@
 		<key>comuna</key>
 		<string>3</string>
 		<key>poblacion_total</key>
-		<string>440</string>
+		<string>138926</string>
 		<key>hombres</key>
 		<string>63273</string>
 		<key>mujeres</key>
@@ -64,9 +64,9 @@
 		<key>zoom</key>
 		<string>13</string>
 		<key>manzanas_por_barrio</key>
-		<string>0.4</string>
+		<string>256</string>
 		<key>arboles_por_barrio</key>
-		<string>0.2</string>
+		<string>7635</string>
 	</dict>
 	<dict>
 		<key>barrio</key>
@@ -74,7 +74,7 @@
 		<key>comuna</key>
 		<string>4</string>
 		<key>poblacion_total</key>
-		<string>660</string>
+		<string>89452</string>
 		<key>hombres</key>
 		<string>42737</string>
 		<key>mujeres</key>
@@ -86,9 +86,9 @@
 		<key>zoom</key>
 		<string>13</string>
 		<key>manzanas_por_barrio</key>
-		<string>0.3</string>
+		<string>369</string>
 		<key>arboles_por_barrio</key>
-		<string>0.9</string>
+		<string>10132</string>
 	</dict>
 	<dict>
 		<key>barrio</key>
