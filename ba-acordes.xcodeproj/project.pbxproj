@@ -19,6 +19,7 @@
 		7C87CAB41C0BAE77006BC7E0 /* Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C87CAB31C0BAE77006BC7E0 /* Hex.swift */; };
 		7C87CAB61C0BB34E006BC7E0 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C87CAB51C0BB34E006BC7E0 /* MapKit.framework */; };
 		7C87CAB81C0BB723006BC7E0 /* caba_metadata.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7C87CAB71C0BB723006BC7E0 /* caba_metadata.plist */; };
+		7C87CABA1C0BBB9C006BC7E0 /* caba_editada.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7C87CAB91C0BBB9C006BC7E0 /* caba_editada.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		7C87CAB31C0BAE77006BC7E0 /* Hex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hex.swift; sourceTree = "<group>"; };
 		7C87CAB51C0BB34E006BC7E0 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		7C87CAB71C0BB723006BC7E0 /* caba_metadata.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = caba_metadata.plist; sourceTree = "<group>"; };
+		7C87CAB91C0BBB9C006BC7E0 /* caba_editada.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = caba_editada.plist; sourceTree = "<group>"; };
 		97779A6001BD8E6A66278540 /* Pods-ba-acordes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ba-acordes.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ba-acordes/Pods-ba-acordes.debug.xcconfig"; sourceTree = "<group>"; };
 		D84D2AEE9BF7BEF6461F91BE /* Pods_ba_acordes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ba_acordes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -94,6 +96,7 @@
 				50695C5A1C0A42A200BA6AEA /* Assets.xcassets */,
 				50695C5C1C0A42A200BA6AEA /* LaunchScreen.storyboard */,
 				50695C5F1C0A42A200BA6AEA /* Info.plist */,
+				7C87CAB91C0BBB9C006BC7E0 /* caba_editada.plist */,
 				7C87CAB71C0BB723006BC7E0 /* caba_metadata.plist */,
 				50695C651C0A464000BA6AEA /* ba-acordes-Bridging-Header.h */,
 			);
@@ -180,6 +183,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7C87CAB81C0BB723006BC7E0 /* caba_metadata.plist in Resources */,
+				7C87CABA1C0BBB9C006BC7E0 /* caba_editada.plist in Resources */,
 				50695C5E1C0A42A200BA6AEA /* LaunchScreen.storyboard in Resources */,
 				50695C5B1C0A42A200BA6AEA /* Assets.xcassets in Resources */,
 				50695C591C0A42A200BA6AEA /* Main.storyboard in Resources */,

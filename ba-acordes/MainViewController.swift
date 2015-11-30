@@ -24,7 +24,7 @@ class MainViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let barriosPath = NSBundle.mainBundle().pathForResource("caba_metadata", ofType: "plist")
+        let barriosPath = NSBundle.mainBundle().pathForResource("caba_editada", ofType: "plist")
         barrios = NSArray(contentsOfFile: barriosPath!) as! [NSDictionary]
     }
     
@@ -83,10 +83,6 @@ class MainViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
         let comuna = Int(itemSelect["comuna"] as! String)
         // gradien
         self.animateLayer(comuna!)
-        
-        // CLLocationCoordinate2D(latitude: cityObjSelect.lat, longitude: cityObjSelect.lon)
-//        cityCoords?.latitude = Double(itemSelect["latitude"] as! String)!
-//        cityCoords?.longitude = Double(itemSelect["longitude"] as! String)!
         
         var cityCoords = CLLocationCoordinate2D(latitude: Double(itemSelect["latitude"] as! String)!, longitude: Double(itemSelect["longitude"] as! String)!)
         let span = MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
